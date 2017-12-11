@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.aidu.info.dao.ISellerDao">
+    <resultMap id="BaseResultMap" type="com.aidu.info.pojo.Seller" >
+    	<id column="seller_id" property="seller_id" jdbcType="INTEGER" />
+   		<result column="seller_name" property="seller_name" jdbcType="VARCHAR" />
+    	<result column="sales" property="sales" jdbcType="INTEGER" />
+    	<result column="min_price" property="min_price" jdbcType="INTEGER" />
+    	<result column="reach_time" property="reach_time" jdbcType="INTEGER" />
+  	</resultMap>
+        
+    <select id="getAllSellers" resultMap="BaseResultMap">
+        	select * from tb_seller where 1
+    </select >
+</mapper>
